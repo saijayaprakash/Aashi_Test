@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd>
+    <useProjectRuleSet>false</useProjectRuleSet>
+    <ruleSetFile>.ruleset</ruleSetFile>
+    <rules>
+        <rule>
+            <name>EmptyCatchBlock</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>EmptyIfStmt</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>EmptyWhileStmt</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>EmptyTryBlock</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>EmptyFinallyBlock</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>EmptySwitchStatements</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>JumbledIncrementer</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>ForLoopShouldBeWhileLoop</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>UnnecessaryConversionTemporary</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>OverrideBothEqualsAndHashcode</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>DoubleCheckedLocking</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>ReturnFromFinallyBlock</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>EmptySynchronizedBlock</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>UnnecessaryReturn</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>EmptyStaticInitializer</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>UnconditionalIfStatement</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>EmptyStatementNotInLoop</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>BooleanInstantiation</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>UnnecessaryFinalModifier</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>CollapsibleIfStatements</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>UselessOverridingMethod</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>ClassCastExceptionWithToArray</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>AvoidDecimalLiteralsInBigDecimalConstructor</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>UselessOperationOnImmutable</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>MisplacedNullCheck</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>UnusedNullCheckInEquals</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>AvoidThreadGroup</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>BrokenNullCheck</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>BigIntegerInstantiation</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>AvoidUsingOctalValues</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>AvoidUsingHardCodedIP</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>CheckResultSet</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>AvoidMultipleUnaryOperators</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>EmptyInitializer</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>DontCallThreadRun</name>
+            <ruleset>Basic Rules</ruleset>
+        </rule>
+        <rule>
+            <name>IfStmtsMustUseBraces</name>
+            <ruleset>Braces Rules</ruleset>
+        </rule>
+        <rule>
+            <name>WhileLoopsMustUseBraces</name>
+            <ruleset>Braces Rules</ruleset>
+        </rule>
+        <rule>
+            <name>IfElseStmtsMustUseBraces</name>
+            <ruleset>Braces Rules</ruleset>
+        </rule>
+        <rule>
+            <name>ForLoopsMustUseBraces</name>
+            <ruleset>Braces Rules</ruleset>
+        </rule>
+        <rule>
+            <name>ClassNameRules</name>
+            <ruleset>Class Name rules</ruleset>
+        </rule>
+        <rule>
+            <name>FinalMemberRule</name>
+            <ruleset>Class Final Member Check rules</ruleset>
+        </rule>
+        <rule>
+            <name>MemberNameRules</name>
+            <ruleset>Member Name rules</ruleset>
+        </rule>
+        <rule>
+            <name>MethodParamRules</name>
+            <ruleset>Method Param rules</ruleset>
+        </rule>
+        <rule>
+            <name>StaticMemberRule</name>
+            <ruleset>Class static Member Check rules</ruleset>
+        </rule>
+        <rule>
+            <name>Stream</name>
+            <ruleset>AdventNet Rules</ruleset>
+        </rule>
+        <rule>
+            <name>SystemPrintln</name>
+            <ruleset>AdventNetCustomRule</ruleset>
+        </rule>
+    </rules>
+    <includeDerivedFiles>false</includeDerivedFiles>
+    <violationsAsErrors>true</violationsAsErrors>
+</pmd>
