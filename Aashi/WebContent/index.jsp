@@ -16,8 +16,8 @@
 		<link rel="stylesheet" href="css/style.css">
 
 		<!-- User Scripts -->
-		<script type="text/javascript" src="js/app.module.js"></script>
-		<script type="text/javascript" src="js/app.controller.js"></script>
+		<script type="text/javascript" src="js/app-module.js"></script>
+		<script type="text/javascript" src="js/app-controller.js"></script>
 </head>
 <body ng-app="login" ng-controller="loginController">
 
