@@ -18,8 +18,20 @@
 		<!-- User Scripts -->
 		<script type="text/javascript" src="js/app-module.js"></script>
 		<script type="text/javascript" src="js/app-controller.js"></script>
+
 </head>
 <body ng-app="login" ng-controller="loginController">
+		<%
+			try{
+				HttpSession sessionWelcome=request.getSession();
+				String user=(String)sessionWelcome.getAttribute("user");
+				if(user!=null)
+				{
+					response.sendRedirect("welcome.jsp");
+				}
+				
+			}catch(Exception e){System.out.println(e);}
+		%>
 		<script type="text/javascript">
 		function checkLoginState() {
 	    FB.getLoginStatus(function(response) {
@@ -46,8 +58,24 @@
 			    document.getElementById('fbForm').submit();
 		    });
 		  }
-		</script>
 
+		   window.fbAsyncInit = function() {
+				FB.init({
+				appId      : '149621035588105',
+				xfbml      : true,
+				version    : 'v2.10'
+				});
+			};
+
+			(function(d, s, id){
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) {return;}
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_US/sdk.js";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+
+		</script>
 		<img src="static/img/149H.jpg" class="background">
 		<center><h1 class="martop50">Welcome to Your '$' Money Portal..!</h1></center>
 		<div class="input">

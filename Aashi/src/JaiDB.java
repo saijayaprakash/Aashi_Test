@@ -26,7 +26,7 @@ public class JaiDB{
 	}
 	public Statement getStatement(){
 		try {
-			connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/jai","root","");
+			connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/jai","root","root");
 			statement = connection.createStatement();
 		} catch (SQLException e) {
 			e.printStackTrace();

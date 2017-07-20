@@ -23,7 +23,7 @@ public class Reset extends HttpServlet {
 			RequestDispatcher rd;
 			try{	
 				Class.forName("com.mysql.jdbc.Driver");
-				Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/jai","root","");
+				Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/jai","root","root");
 				Statement st=con.createStatement();
 				
 				HttpSession sesssion = request.getSession();
