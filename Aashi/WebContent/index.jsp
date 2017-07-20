@@ -20,7 +20,6 @@
 		<script type="text/javascript" src="js/app-controller.js"></script>
 </head>
 <body ng-app="login" ng-controller="loginController">
-		<h1>Alienware</h1>
 		<script type="text/javascript">
 		function checkLoginState() {
 	    FB.getLoginStatus(function(response) {
