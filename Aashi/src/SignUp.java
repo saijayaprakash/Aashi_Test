@@ -30,7 +30,7 @@ public class SignUp extends HttpServlet {
 				String dbPath=sc.getInitParameter("dbPath");
 				String dbUser=sc.getInitParameter("dbUser");
 				Class.forName(dbClass);
-				Connection con=DriverManager.getConnection(dbPath,dbUser,"");
+				Connection con=DriverManager.getConnection(dbPath,dbUser,"root");
 				Statement st=con.createStatement();
 				String sql="insert into login"+" values (?,?,?)";
 				

@@ -23,7 +23,7 @@ public class GetDetails extends HttpServlet {
 			PrintWriter out=response.getWriter();
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/jai","root","");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/jai","root","root");
 			Statement st=con.createStatement();
 			HttpSession session =request.getSession();
 			String username=(String) session.getAttribute("name");
