@@ -22,8 +22,7 @@ public class Reset extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			RequestDispatcher rd;
 			try{	
-				Class.forName("com.mysql.jdbc.Driver");
-				Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/jai","root","root");
+				Connection con=new JaiDB().getConnection();
 				Statement st=con.createStatement();
 				
 				HttpSession sesssion = request.getSession();
