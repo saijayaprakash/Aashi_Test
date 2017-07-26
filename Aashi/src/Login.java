@@ -19,8 +19,7 @@ public class Login extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out=response.getWriter();
 		try{
-		Class.forName("com.mysql.jdbc.Driver");
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/jai","root","root");
+		Connection con=new JaiDB().getConnection();
 		Statement st=con.createStatement();
 		
 		String username=request.getParameter("username");
@@ -28,8 +27,6 @@ public class Login extends HttpServlet {
 		String fbuser=request.getParameter("fbuser");
 		String fbId = request.getParameter("fbId");
 		String fbAccessKey = request.getParameter("fbAccessKey");
-		
-		System.out.println("fb user"+fbuser);
 		
 		boolean isFbUser = false;
 		if(fbuser!=null && !fbuser.isEmpty()){

@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
 import com.mysql.jdbc.ResultSet;
 
 /**
@@ -25,11 +28,8 @@ public class GetUsers extends HttpServlet {
 		response.setContentType("type/html");
 		PrintWriter out=response.getWriter();
 		try {
-//			Class.forName("com.mysql.jdbc.Driver");
-//			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/jai","root","");
-			JaiDB db = new JaiDB();
-//			Statement st= con.createStatement();
-			Statement st= db.getStatement();
+			Connection con = new JaiDB().getConnection();
+			Statement st=con.createStatement();
 			
 			String sql="select username,password from login;";
 			java.sql.ResultSet rs=st.executeQuery(sql);

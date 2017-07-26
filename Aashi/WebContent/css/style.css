@@ -28,3 +28,26 @@
 .martop10{
 	margin-top: 10px;
 }
+.chat-box{
+	position: fixed;
+	bottom: 50px;
+	right: 10px;
+	height: 300px;
+	width: 200px;
+	border: 1px solid blue;
+}
+.chat-title{
+	border: 1px solid red;
+}
+.msg-box{
+    height: 30px;
+	margin-top: 10px;
+}
+.msg-content{
+	height: 230px;
+	border: 1px solid green;
+}
+.flow-scroll{
+	height: 30px !important;
+	overflow: scroll;
+}

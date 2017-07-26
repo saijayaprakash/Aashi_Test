@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Home</title>
+		<link rel="stylesheet" href="css/style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		
@@ -36,5 +37,15 @@
 	<form action="logout" method="post">
 		<input type="submit" value="logout">
 	</form>
+	<div class="chat-box">
+		<div class="chat-title">{{user.fullname}}</div>
+		<div class="msg-content"></div>
+		<div class="msg-box">
+			<span class="col-sm-8" contenteditable=true>
+				Change this text!
+			</span>
+			<span class="col-sm-4"><input type="button" value="Send"></span>						
+		</div>
+	</div>
 </body>
 </html>
