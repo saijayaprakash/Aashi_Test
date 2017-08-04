@@ -21,6 +21,7 @@
 
 </head>
 <body ng-app="login" ng-controller="loginController">
+1
 		<%
 			try{
 				HttpSession sessionWelcome=request.getSession();
