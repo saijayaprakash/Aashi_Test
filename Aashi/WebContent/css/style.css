@@ -14,6 +14,12 @@
     left: 0px;
     z-index: -1;
 }
+.editor{
+	visibility: hidden;
+}
+.editable:hover .editor{
+	visibility: visible;
+}
 .input{
 	background: white;
 	padding: 10px;
