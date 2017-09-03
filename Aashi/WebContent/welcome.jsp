@@ -26,7 +26,7 @@
 	%>
 	<form action="reset" method="GET">
 	<h1>Hello <font color="red">{{user.fullname}}</font></h1>
-	<h3 ng-hide="editing" ng-click="editing=true">Your password is {{user.password}}</h1> 
+	<h3 ng-hide="editing" ng-click="editing=true" class="editable">Your password is {{user.password}} <span class="glyphicon glyphicon-pencil editor"></span></h1> 
 		<span ng-show="editing"> 
 			New Password : <input type="text" name="rpass">
 			<input type="submit" value="reset" name="reset">
