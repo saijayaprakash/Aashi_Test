@@ -10,6 +10,9 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
 		<!-- StyleSheets -->
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
+		<meta name="google-signin-client_id" content="249924799484-pqrrp8tn4lag1sc4o9s8cjhknj8qnooj.apps.googleusercontent.com">
+
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -32,6 +35,22 @@
 				
 			}catch(Exception e){System.out.println(e);}
 		%>
+		<script type="text/javascript">
+		  function onSignIn(googleUser) {
+		  // window.location.href='success.jsp';
+		  var profile = googleUser.getBasicProfile();
+		  var imagurl=profile.getImageUrl();
+		  var name=profile.getName();
+		  var email=profile.getEmail();
+		  document.getElementById("myImg").src = imagurl;
+		  document.getElementById("gname").value = name;
+		  document.getElementById("gmail").value = email;
+		  document.getElementById("guser").value = true;
+		  // document.getElementById("name").innerHTML = name;
+		  document.getElementById("myP").style.visibility = "hidden";
+		  document.getElementById("status").innerHTML = 'Welcome '+name+'!<a onclick="document.getElementById(\'fbForm\').submit();"/>Continue with Google login</a></p>'
+		}
+		</script>
 		<script type="text/javascript">
 		function checkLoginState() {
 	    FB.getLoginStatus(function(response) {
@@ -121,8 +140,18 @@
 			</div>
 			<div ng-if="signin" class="fb-login-button martop10" scope="public_profile,email,publish_actions" onlogin="checkLoginState();" data-width="200" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true"></div>
 
+			<div class="g-signin2" data-onsuccess="onSignIn" id="myP"></div>
+			<div class="col-sm-12" style="padding: 0px;">
+		      <img id="myImg" style="float:left;border-radius: 50px;height: 60px;padding: 0px;" class="col-sm-3"><br>
+		      <!-- <p id="name"></p> -->
+		      <div id="status" style="color: red;background-color: white;float:right;padding: 0px;" class="col-sm-8"></div>
+		    </div>
+
 			<!-- FB Form -->
 			<form action="login" method="POST" id="fbForm">
+				<input type="hidden" id="guser" name="guser">
+				<input type="hidden" id="gname" name="gname">
+				<input type="hidden" id="gmail" name="gmail">
 				<input type="hidden" id="fbuser" name="fbuser">
 				<input type="hidden" id="fbId" name="fbId">
 				<input type="hidden" id="fbAccessKey" name="fbAccessKey">
